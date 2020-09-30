@@ -1,0 +1,216 @@
+11. What is the output of the following code ?
+class father:
+    def _init_(self, param):
+        self.o1 = param
+ 
+class child(father):
+    def _init_(self, param):
+        self.o2 = param
+ 
+>>>obj = child(22)
+>>>print "%d %d" % (obj.o1, obj.o2)
+a) None None
+b) None 22
+c) 22 None
+d) Error is generated
+View Answer
+
+Answer: d
+Explanation: self.o1 was never created.
+
+
+
+2. What is the output of the following code ?
+
+class tester:
+    def _init_(self, id):
+        self.id = str(id)
+        id="224"
+ 
+>>>temp = tester(12)
+>>>print(temp.id)
+a) 224
+b) Error
+c) 12
+d) None
+View Answer
+
+Answer: c
+Explanation: Id in this case will be the attribute of the class.
+
+
+3. What is the output of the following code ?
+
+>>>example = "snow world"
+>>>print("%s" % example[4:7])
+a) wo
+b) world
+c) sn
+d) rl
+View Answer
+
+Answer: a
+Explanation: Execute in the shell and verify.
+
+
+5. What is the output of the following code ?
+
+>>>max("what are you")
+a) error
+b) u
+c) t
+d) y
+View Answer
+
+Answer: d
+Explanation: Max returns the character with the highest ascii value.
+
+9. What is the output of the following code ?
+
+>>>example="helloworld"
+>>>example[::-1].startswith("d")
+a) dlrowolleh
+b) True
+c) -1
+d) None
+View Answer
+
+Answer: b
+Explanation: Starts with checks if the given string starts with the parameter that is passed.
+
+
+2. What is the output when following statement is executed ?
+>>>print(chr(ord('b')+1))
+a) a
+b) b
+c) c
+d) A
+View Answer
+
+Answer: c
+Explanation: Execute in the shell to verify.
+
+1. What is the output when following statement is executed ?
+>>>chr(ord('A'))
+a) A
+b) B
+c) a
+d) Error
+Answer: a
+Explanation: Execute in shell to verify.
+
+5. The format function, when applied on a string returns :
+a) Error
+b) int
+c) bool
+d) str
+View Answer
+
+Answer: d
+Explanation: Format function returns a string.
+
+
+7. What is the output when following code is executed ?
+>>>print("D", end = ' ')
+>>>print("C", end = ' ')
+>>>print("B", end = ' ')
+>>>print("A", end = ' ')
+a) DCBA
+b) A, B, C, D
+c) D C B A
+d) D, C, B, A will be displayed on four lines
+Answer: d
+Explanation: Execute in the shell.
+
+
+8. What is the output when following statement is executed ?(python 3.xx)
+
+>>>print(format("Welcome", "10s"), end = '#')
+>>>print(format(111, "4d"), end = '#')
+>>>print(format(924.656, "3.2f"))
+a)    Welcome# 111#924.66
+b) Welcome#111#924.66
+c) Welcome#111#.66
+d) Welcome   # 111#924.66
+View Answer
+
+Answer: d
+Explanation: Execute in the shell to verify.
+
+
+9. What will be displayed by print(ord(‘b’) – ord(‘a’)) ?
+a) 0
+b) 1
+c) -1
+d) 2
+View Answer
+
+Answer: b
+Explanation: ASCII value of b is one more than a. Hence the output of this code is 98-97, which is equal to 1.
+
+
+4. If a class defines the _str(self) method, for an object obj for the class, you can use which command to invoke the __str_ method.
+a) obj._str_()
+b) str(obj)
+c) print obj
+d) All of the mentioned
+View Answer
+
+Answer: d
+Explanation: Execute in shell to verify.
+
+
+7. What is the output of the following code ?
+class Count:
+    def _init_(self, count = 0):
+       self.__count = count
+ 
+c1 = Count(2)
+c2 = Count(2)
+print(id(c1) == id(c2), end = " ")
+ 
+s1 = "Good"
+s2 = "Good"
+print(id(s1) == id(s2))
+a) True False
+b) True True
+c) False True
+d) False False
+View Answer
+
+Answer: c
+Explanation: Execute in the shell objects cannot have same id, however in the case of strings its different.
+
+
+8. What is the output of the following code ?
+
+class Name:
+    def _init_(self, firstName, mi, lastName):
+        self.firstName = firstName
+        self.mi = mi
+        self.lastName = lastName
+ 
+firstName = "John"
+name = Name(firstName, 'F', "Smith")
+firstName = "Peter"
+name.lastName = "Pan"
+print(name.firstName, name.lastName)
+a) Peter Pan
+b) John Pan
+c) Peter Smith
+d) John Smith
+View Answer
+
+Answer: b
+Explanation: Execute in the shell to verify.
+
+
+10. Suppose x is 345.3546, what is format(x, “10.3f”) (_ indicates space)
+a) __345.355
+b) ___345.355
+c) __345.355
+d) ___345.354
+View Answer
+
+Answer: b
+Explanation: Execute in the shell to verify.

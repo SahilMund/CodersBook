@@ -1,0 +1,45 @@
+# A program to take a input from user i.e n which will be the size of the list
+#this list will contain n elements entered by the user.
+#Now randomly 2 no. will be swapped and checked wether the list is sorted or not
+#this procedure is repeated until list is sorted
+#o/p should be printed without space ex-12345
+
+
+
+import random									#importing random library
+n=int(input())
+int_lst=[]
+for i in range(0,n):
+	int_lst.append(int(input()))
+r=[]												#another empty list to store repeated values
+leng=len(int_lst)								#length of list
+j=0												#counter
+while j!=leng:									#in for loop condition cannot be updated*
+	y=int_lst.count(int_lst[j])				#counting the repeatation of values
+	if(y>=2):									#if repeatation occurs removing those values and storing in  r[]
+		x=int_lst[j]
+		for i in range(y):
+			r.append(x)
+			int_lst.remove(x)
+		int_lst.append(x)					#as all those values being removed so inserting a single element of that into the list
+		r.remove(x)						#as r[] contains repeated values and one value been"" added to list so now one val. should be removed from r[]
+		j=0								#to overcome out of bound exception loop is being reset
+	leng=len(int_lst)					#new length is updated
+	j=j+1									#counter to terminate
+int_lst2=int_lst.copy()				#creating a copy of list
+int_lst2.sort()
+while(int_lst!=int_lst2):				#sorting according to ques.'s procedure
+	i=random.choices(int_lst)
+	i_index=int_lst.index(i[0])
+	j=random.choices(int_lst)
+	j_index=int_lst.index(j[0])
+	int_lst[i_index]=int(j[0])
+	int_lst[j_index]=int(i[0])
+for i in r:								#inserting those repeated values again to the list from r[]
+	r_index=int_lst.index(i)
+	int_lst.insert(r_index,i)
+res=''
+for items in int_lst:
+	res=res+str(items)
+print(res)
+    
